@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "ParcientesSPA";
+}
+
+@using (Html.BeginForm()) 
+{
+<div>
+    <!-- BEGIN HIDDEN FIELDS AREA-->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h1 class="panel-title">Pesquisa por Pacientes</h1>
+        </div>
+        <div class="panel-body">
+            @Html.Label("Nome do Paciente")
+            @Html.TextBox("Search", "", 
+            new {@class="form-control"})
+        </div>
+        <div class="panel-footer">
+    
+        </div>
+    </div>
+    <!-- END HIDDEN FIELDS AREA-->
+    <!-- BEGIN SEARCH AREA-->
+    <!-- END SEARCH AREA-->
+    <!-- BEGIN LIST AREA-->
+    <!-- END LIST AREA-->
+</div>   
+}
+
+@section scripts 
+{
+    <script> </script>
+}

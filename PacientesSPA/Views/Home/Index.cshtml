@@ -2,32 +2,52 @@
     ViewBag.Title = "ParcientesSPA";
 }
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
-<div>
-    <!-- BEGIN HIDDEN FIELDS AREA-->
-    <div class="panel panel-primary">
-        <div class="panel-heading">
-            <h1 class="panel-title">Pesquisa por Pacientes</h1>
-        </div>
-        <div class="panel-body">
-            @Html.Label("Nome do Paciente")
-            @Html.TextBox("Search", "", 
-            new {@class="form-control"})
-        </div>
-        <div class="panel-footer">
-    
-        </div>
+<!-- BEGIN HIDDEN FIELDS AREA-->
+<!-- END HIDDEN FIELDS AREA-->
+<!-- BEGIN SEARCH AREA-->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h1 class="panel-title">Pesquisa por Pacientes</h1>
     </div>
-    <!-- END HIDDEN FIELDS AREA-->
-    <!-- BEGIN SEARCH AREA-->
-    <!-- END SEARCH AREA-->
-    <!-- BEGIN LIST AREA-->
-    <!-- END LIST AREA-->
-</div>   
+    <div class="panel-body">
+        @Html.Label("Nome do Paciente")
+        @Html.TextBox("Search", "", new {@class="form-control"})
+    </div>
+    <div class="panel-footer">
+        <button id="btnSearch" class="btn btn-sm btn-primary">Procurar</button>
+        <button id="btnReset" class="btn btn-sm btn-primary">Limpar</button>
+    </div>
+</div>
+<!-- END SEARCH AREA-->
+<!-- BEGIN LIST AREA-->
+<div class="table-responsive">
+    <table class="table table-condensed table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Paciente</th>
+                <th>Responsável</th>
+                <th>Nascimento</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model){
+            <tr>
+                <td>@item.Nome</td>
+                <td>@item.Acompanhante</td>
+                <td>@item.Nascimento</td>
+            </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+<!-- END LIST AREA-->
 }
 
-@section scripts 
+@section scripts
 {
-    <script> </script>
+<script> </script>
 }

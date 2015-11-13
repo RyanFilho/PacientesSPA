@@ -1,4 +1,5 @@
 ﻿using PacientesSPA.Data_Acess_Layer;
+using PacientesSPA.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,11 @@ namespace PacientesSPA.Controllers
     {
         public ActionResult Index()
         {
-            PacienteManager manager = new PacienteManager();
-            return View(manager.Get());
+            PacienteVM viewModel = new PacienteVM();
+
+            viewModel.HandleRequest();
+
+            return View(viewModel);
         }
 
         public ActionResult About()

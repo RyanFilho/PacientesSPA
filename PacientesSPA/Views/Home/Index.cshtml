@@ -1,53 +1,64 @@
-﻿@{
+﻿@Model PacienteVM
+
+@{
     ViewBag.Title = "ParcientesSPA";
 }
 
 @using (Html.BeginForm())
 {
-<!-- BEGIN HIDDEN FIELDS AREA-->
-<!-- END HIDDEN FIELDS AREA-->
-<!-- BEGIN SEARCH AREA-->
-<div class="panel panel-primary">
-    <div class="panel-heading">
-        <h1 class="panel-title">Pesquisa por Pacientes</h1>
-    </div>
-    <div class="panel-body">
-        @Html.Label("Nome do Paciente")
-        @Html.TextBox("Search", "", new {@class="form-control"})
-    </div>
-    <div class="panel-footer">
-        <button id="btnSearch" class="btn btn-sm btn-primary">Procurar</button>
-        <button id="btnReset" class="btn btn-sm btn-primary">Limpar</button>
-    </div>
-</div>
-<!-- END SEARCH AREA-->
-<!-- BEGIN LIST AREA-->
-<div class="table-responsive">
-    <table class="table table-condensed table-bordered table-striped table-hover">
-        <thead>
-            <tr>
-                <th>Paciente</th>
-                <th>Responsável</th>
-                <th>Nascimento</th>
-            </tr>
-        </thead>
+    <!-- BEGIN HIDDEN FIELDS AREA-->
+    @Html.HiddenFor(m => m.EventCommand)
+    <!-- END HIDDEN FIELDS AREA-->
 
-        <tbody>
-            @foreach (var item in Model){
-            <tr>
-                <td>@item.Nome</td>
-                <td>@item.Acompanhante</td>
-                <td>@item.Nascimento</td>
-            </tr>
-            }
-        </tbody>
 
-    </table>
-</div>
-<!-- END LIST AREA-->
+    <!-- BEGIN SEARCH AREA-->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h1 class="panel-title">Pesquisa por Pacientes</h1>
+        </div>
+        <div class="panel-body">
+            @Html.LabelFor(m => m.SearchEntity.Nome, "Nome do Paciente")
+            @Html.TextBoxFor(m => m.SearchEntity.Nome, new { @class = "form-control"})
+        </div>
+        <div class="panel-footer">
+            <button id="btnSearch" data-search-action="search" class="btn btn-sm btn-primary">
+                <i class="glyphicon glyphicon-search"></i>
+                &nbsp;Search
+            </button>
+            <button id="btnReset" class="btn btn-sm btn-primary">Limpar</button>
+        </div>
+    </div>
+    <!-- END SEARCH AREA-->
+
+
+    <!-- BEGIN LIST AREA-->
+    <div class="table-responsive">
+        <table class="table table-condensed table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Nome do Paciente<br></th>
+                    <th>Responsável</th>
+                    <th>Nascimento</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model.Pacientes)
+                {
+                    <tr>
+                        <td>@item.Nome</td>
+                        <td>@item.Acompanhante</td>
+                        <td>@item.Nascimento</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+    <!-- END LIST AREA-->
 }
 
 @section scripts
 {
-<script> </script>
+    <script> </script>
 }

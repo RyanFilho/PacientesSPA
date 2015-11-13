@@ -1,5 +1,4 @@
-﻿@Model PacienteVM
-
+﻿@model PacientesSPA.ViewModels.PacienteVM
 @{
     ViewBag.Title = "ParcientesSPA";
 }
@@ -17,15 +16,18 @@
             <h1 class="panel-title">Pesquisa por Pacientes</h1>
         </div>
         <div class="panel-body">
-            @Html.LabelFor(m => m.SearchEntity.Nome, "Nome do Paciente")
-            @Html.TextBoxFor(m => m.SearchEntity.Nome, new { @class = "form-control"})
+            @Html.LabelFor(m => m.SearchPaciente.Nome, "Nome do Paciente")
+            @Html.TextBoxFor(m => m.SearchPaciente.Nome, new { @class = "form-control"})
         </div>
         <div class="panel-footer">
-            <button id="btnSearch" data-search-action="search" class="btn btn-sm btn-primary">
+            <button id="btnSearch" data-pdsa-action="search" class="btn btn-sm btn-primary">
                 <i class="glyphicon glyphicon-search"></i>
                 &nbsp;Search
             </button>
-            <button id="btnReset" class="btn btn-sm btn-primary">Limpar</button>
+            <button id="btnReset" data-pdsa-action="resetsearch" class="btn btn-sm btn-primary">
+                <i class="glyphicon glyphicon-share-alt"></i>
+                &nbsp;Limpar
+            </button>
         </div>
     </div>
     <!-- END SEARCH AREA-->
@@ -60,5 +62,15 @@
 
 @section scripts
 {
-    <script> </script>
+    <script>
+        $(document).ready(function () {
+            $("[data-pdsa-action]").on("click", function (e) {
+                e.preventDefault();
+
+                $("#EventCommand").val($(this).data("pdsa-action"));
+
+                $("form").submit();
+            });
+        });
+    </script>
 }

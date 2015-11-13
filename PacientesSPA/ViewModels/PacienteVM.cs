@@ -25,15 +25,13 @@ namespace PacientesSPA.ViewModels
             switch (EventCommand.ToLower())
             {
                 case "list" :
-                    Get();
-                    break;
-
                 case "search":
                     Get();
                     break;
 
                 case "resetsearch":
                     ResetSearch();
+                    Get();
                     break;
 
                 default:
@@ -41,7 +39,7 @@ namespace PacientesSPA.ViewModels
             }
         }
 
-        public void ResetSearch()
+        private void ResetSearch()
         {
             SearchPaciente = new Paciente();  
         }

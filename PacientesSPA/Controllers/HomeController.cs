@@ -19,6 +19,16 @@ namespace PacientesSPA.Controllers
             return View(viewModel);
         }
 
+        [HttpPost]
+        public ActionResult Index(PacienteVM viewModel)
+        {
+            viewModel.HandleRequest();
+
+            ModelState.Clear();
+
+            return View(viewModel);
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

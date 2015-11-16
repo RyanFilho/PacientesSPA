@@ -7,56 +7,105 @@
 {
     <!-- BEGIN HIDDEN FIELDS AREA-->
     @Html.HiddenFor(m => m.EventCommand)
+    @Html.HiddenFor(m => m.Mode)
     <!-- END HIDDEN FIELDS AREA-->
 
-
-    <!-- BEGIN SEARCH AREA-->
+    <!-- BEGIN DETAIL AREA -->
+    if (Model.IsDetailAreaVisible)
+    {
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h1 class="panel-title">Pesquisa por Pacientes</h1>
+            <h1 class="panel-title">Informações Do Paciente</h1>
         </div>
         <div class="panel-body">
-            @Html.LabelFor(m => m.SearchPaciente.Nome, "Nome do Paciente")
-            @Html.TextBoxFor(m => m.SearchPaciente.Nome, new { @class = "form-control"})
+            <div class="form-group">
+                @Html.LabelFor(m => m.Entity.Nome)
+                @Html.TextBoxFor(m => m.Entity.Nome, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Entity.Nascimento)
+                @Html.TextBoxFor(m => m.Entity.Nascimento, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Entity.Acompanhante)
+                @Html.TextBoxFor(m => m.Entity.Acompanhante, new { @class = "form-control" })
+            </div>
         </div>
         <div class="panel-footer">
-            <button id="btnSearch" data-pdsa-action="search" class="btn btn-sm btn-primary">
-                <i class="glyphicon glyphicon-search"></i>
-                &nbsp;Search
-            </button>
-            <button id="btnReset" data-pdsa-action="resetsearch" class="btn btn-sm btn-primary">
-                <i class="glyphicon glyphicon-share-alt"></i>
-                &nbsp;Limpar
-            </button>
+            <div class="row">
+                <div class="col-sm-12">
+                    <button id="btnSave" data-pdsa-action="save" class="btn btn-sm btn-primary">
+                        <i class="glyphicon glyphicon-floppy-disk"></i>
+                        &nbsp;Save
+                    </button>
+                    <button id="btnCancel" data-pdsa-action="cancel" formnovalidate="formnovalidate" class="btn btn-sm btn-primary">
+                        <i class="glyphicon glyphicon-remove-circle"></i>
+                        &nbsp;Cancel
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
+    }
+    <!-- END DETAIL AREA -->
+
+    <!-- BEGIN SEARCH AREA-->
+    if (Model.IsSearchAreaVisible)
+    {
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h1 class="panel-title">Pesquisa por Pacientes</h1>
+            </div>
+            <div class="panel-body">
+                @Html.LabelFor(m => m.SearchPaciente.Nome, "Nome do Paciente")
+                @Html.TextBoxFor(m => m.SearchPaciente.Nome, new { @class = "form-control" })
+            </div>
+            <div class="panel-footer">
+                <button id="btnSearch" data-pdsa-action="search" class="btn btn-sm btn-primary">
+                    <i class="glyphicon glyphicon-search"></i>
+                    &nbsp;Search
+                </button>
+                <button id="btnReset" data-pdsa-action="resetsearch" class="btn btn-sm btn-primary">
+                    <i class="glyphicon glyphicon-share-alt"></i>
+                    &nbsp;Limpar
+                </button>
+                <button id="btnReset" data-pdsa-action="add" class="btn btn-sm btn-success">
+                    <i class="glyphicon glyphicon-plus-sign"></i>
+                    &nbsp;Add
+                </button>
+            </div>
+        </div>
+    }
     <!-- END SEARCH AREA-->
 
 
     <!-- BEGIN LIST AREA-->
-    <div class="table-responsive">
-        <table class="table table-condensed table-bordered table-striped table-hover">
-            <thead>
-                <tr>
-                    <th>Nome do Paciente<br></th>
-                    <th>Responsável</th>
-                    <th>Nascimento</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                @foreach (var item in Model.Pacientes)
-                {
+    if (Model.IsListAreaVisible)
+    {
+        <div class="table-responsive">
+            <table class="table table-condensed table-bordered table-striped table-hover">
+                <thead>
                     <tr>
-                        <td>@item.Nome</td>
-                        <td>@item.Acompanhante</td>
-                        <td>@item.Nascimento</td>
+                        <th>Nome do Paciente<br></th>
+                        <th>Responsável</th>
+                        <th>Nascimento</th>
                     </tr>
-                }
-            </tbody>
+                </thead>
 
-        </table>
-    </div>
+                <tbody>
+                    @foreach (var item in Model.Pacientes)
+                    {
+                        <tr>
+                            <td>@item.Nome</td>
+                            <td>@item.Acompanhante</td>
+                            <td>@item.Nascimento</td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    }
     <!-- END LIST AREA-->
 }
 

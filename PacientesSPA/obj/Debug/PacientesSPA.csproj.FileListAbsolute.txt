@@ -38,3 +38,43 @@ c:\users\ryan\documents\visual studio 2015\Projects\PacientesSPA\PacientesSPA\bi
 c:\users\ryan\documents\visual studio 2015\Projects\PacientesSPA\PacientesSPA\obj\Debug\PacientesSPA.csprojResolveAssemblyReference.cache
 c:\users\ryan\documents\visual studio 2015\Projects\PacientesSPA\PacientesSPA\obj\Debug\PacientesSPA.dll
 c:\users\ryan\documents\visual studio 2015\Projects\PacientesSPA\PacientesSPA\obj\Debug\PacientesSPA.pdb
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\roslyn\csc.exe
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\roslyn\vbc.exe
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\roslyn\VBCSCompiler.exe
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\PacientesSPA.dll.config
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\PacientesSPA.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\PacientesSPA.pdb
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\Antlr3.Runtime.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\Newtonsoft.Json.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\System.Web.Helpers.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\System.Web.Mvc.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\System.Web.Optimization.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\System.Web.Razor.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\System.Web.WebPages.Deployment.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\System.Web.WebPages.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\System.Web.WebPages.Razor.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\WebGrease.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\System.Web.Helpers.xml
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\System.Web.Mvc.xml
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\System.Web.Optimization.xml
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\System.Web.Razor.xml
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\System.Web.WebPages.xml
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\System.Web.WebPages.Deployment.xml
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\System.Web.WebPages.Razor.xml
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\Antlr3.Runtime.pdb
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\Newtonsoft.Json.xml
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\obj\Debug\PacientesSPA.csprojResolveAssemblyReference.cache
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\obj\Debug\PacientesSPA.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\obj\Debug\PacientesSPA.pdb

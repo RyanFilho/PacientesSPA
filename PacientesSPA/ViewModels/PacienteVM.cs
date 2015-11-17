@@ -11,12 +11,11 @@ namespace PacientesSPA.ViewModels
     {
         public PacienteVM()
         {
-            ListMode();
+            Init();     
 
             Pacientes = new List<Paciente>();
             SearchPaciente = new Paciente();
             Entity = new Paciente();
-            EventCommand = "list";
         }
 
         public List<Paciente> Pacientes { get; set; }
@@ -28,10 +27,12 @@ namespace PacientesSPA.ViewModels
         public bool IsDetailAreaVisible { get; set; }
         public bool IsListAreaVisible { get; set; }
         public bool IsSearchAreaVisible { get; set; }
+        public List<KeyValuePair<string, string>> ValidationErros { get; set; }
 
         private void Init()
         {
             EventCommand = "List";
+            ValidationErros = new List<KeyValuePair<string, string>>();
             ListMode();
         }
 
@@ -44,8 +45,12 @@ namespace PacientesSPA.ViewModels
                     Get();
                     break;
 
-
                 case "save":
+                    Save();
+                    if (IsValid)
+                    {
+                        Get();
+                    }
                     break;
 
                 case "resetsearch":
@@ -67,6 +72,29 @@ namespace PacientesSPA.ViewModels
             }
         }
 
+        private void Save()
+        {
+            PacienteManager manager = new PacienteManager();
+            
+
+            if (Mode == "Add")
+            {
+                manager.Insert(Entity);
+            }
+
+            ValidationErros = manager.ValidationErros;
+
+            if (ValidationErros.Count > 0)
+            {
+                IsValid = false;
+            }
+
+            if (!IsValid && Mode == "Add")
+            {
+                AddMode();
+            }
+
+        }
         private void AddMode()
         {
             IsDetailAreaVisible = true;

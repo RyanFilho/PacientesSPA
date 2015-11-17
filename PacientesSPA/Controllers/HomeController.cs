@@ -22,9 +22,20 @@ namespace PacientesSPA.Controllers
         [HttpPost]
         public ActionResult Index(PacienteVM viewModel)
         {
+            viewModel.IsValid = ModelState.IsValid;
             viewModel.HandleRequest();
 
-            ModelState.Clear();
+            if (viewModel.IsValid)
+            {
+                ModelState.Clear();
+            }
+            else
+            {
+                foreach(KeyValuePair<string, string> item in viewModel.ValidationErros)
+                {
+                    ModelState.AddModelError(item.Key, item.Value);
+                }
+            }            
 
             return View(viewModel);
         }

@@ -34,6 +34,17 @@ namespace PacientesSPA.Data_Acess_Layer
             if (ret)
             {
                 // TODO: Create INSERT code here
+                try
+                {
+                    var repository = new PacienteRepositorio(new Context());
+                    repository.InserirPaciente(entity);
+                    repository.Salvar();
+                }
+                catch (Exception)
+                {                                     
+                }
+
+                
             }
 
             return ret;
@@ -45,7 +56,8 @@ namespace PacientesSPA.Data_Acess_Layer
             List<Paciente> pacientes = new List<Paciente>();
 
             //TODO: Add you own data acess method here
-            pacientes = CreateMockData();
+            var repository = new PacienteRepositorio(new Context());
+            pacientes = repository.GetPacientes();
 
             if (!string.IsNullOrEmpty(searchPaciente.Nome))
             {

@@ -78,3 +78,10 @@ C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\Newtonsoft.Jso
 C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\obj\Debug\PacientesSPA.csprojResolveAssemblyReference.cache
 C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\obj\Debug\PacientesSPA.dll
 C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\obj\Debug\PacientesSPA.pdb
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\EntityFramework.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\EntityFramework.SqlServer.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\EntityFramework.SqlServerCompact.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\System.Data.SqlServerCe.dll
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\EntityFramework.xml
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\EntityFramework.SqlServer.xml
+C:\Users\estagio04\Documents\GitHub\PacientesSPA\PacientesSPA\bin\EntityFramework.SqlServerCompact.xml

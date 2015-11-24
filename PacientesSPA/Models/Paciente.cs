@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PacientesSPA.Models
 {
+    [Table("Pacientes")]
     public class Paciente
     {
+        [Key]
         public int Id { get; set; }
         [Required(ErrorMessage = "Nome do paciente deve ser preenchido.")]
         [Display(Description = "Nome do Paciente.")]
